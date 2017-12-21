@@ -11,16 +11,16 @@ MongoClient.connect(url,function (err, db) {
     console.log('Connected to MongoDB');
 
 
-//     db.collection('Todos').insertOne({
-//     text: 'Something to do',
-//     completed: false
-//   }, (err, result) => {
-//     if (err) {
-//       return console.log('Unable to insert todo', err);
-//     }
+    db.collection('todos').insertOne({
+    text: 'Something to do',
+    completed: false
+  }, (err, result) => {
+    if (err) {
+      return console.log('Unable to insert todo', err);
+    }
   
-//     console.log(JSON.stringify(result.ops, undefined, 2));
-//   });
+    console.log(JSON.stringify(result.ops, undefined, 2));
+  });
     
 
     // db.collection('Users').insertOne({
