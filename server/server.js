@@ -46,13 +46,13 @@ app.post('/todos', (req, res) => {
   });
 
 
-// app.get('/todos', (req, res) => {
-//     Todo.find().then((todos) => {
-//       res.send({todos});
-//     }, (e) => {
-//       res.status(400).send(e);
-//     });
-//   });
+app.get('/users', (req, res) => {
+    user.find().then((users) => {
+      res.send({users});
+    }, (e) => {
+      res.status(400).send(e);
+    });
+  });
 
 
 // //GET /todos/
